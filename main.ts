@@ -50,16 +50,16 @@ type User = {
   isActive: boolean
 }
 
-function createUser(name: string, age: number, isActive: boolean): User {
+function createUser(name: string, age: number, isActive: boolean | undefined = true): User {
   const user: User = {
     name: name,
     age: age,
-    isActive: isActive === undefined ? true: isActive
+    isActive: isActive
   }
   return user;
 }
 
-const newUser = createUser('Анна', 25, true)
+const newUser = createUser('Анна', 25)
 console.log(newUser)
 
 /*

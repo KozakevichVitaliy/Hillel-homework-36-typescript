@@ -24,15 +24,15 @@ function sumArray(numbers) {
 // Вивід до консолі для демонстрації
 console.log(sumArray([1, 2, 3, 4])); // Повинно вивести 10
 console.log(sumArray([])); // Повинно вивести 0
-function createUser(name, age, isActive) {
+function createUser(name, age, isActive = true) {
     const user = {
         name: name,
         age: age,
-        isActive: isActive === undefined ? true : isActive
+        isActive: isActive
     };
     return user;
 }
-const newUser = createUser('Анна', 25, true);
+const newUser = createUser('Анна', 25);
 console.log(newUser);
 /*
  * #3
