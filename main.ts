@@ -50,7 +50,7 @@ type User = {
   isActive: boolean
 }
 
-function createUser(name: string, age: number, isActive: boolean | undefined = true): User {
+function createUser(name: string, age: number, isActive: boolean = true): User {
   const user: User = {
     name: name,
     age: age,
